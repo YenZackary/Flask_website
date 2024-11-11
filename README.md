@@ -6,6 +6,6 @@ Welcome to the **Flask Website Tutorial Series**! This repository contains the c
 
 For a detailed step-by-step guide on setting up and extending this project, please visit the following Medium article:
 
-- [Flask Website Tutorial Part 1: Overview & Introduction to Flask](https://medium.com/@zackary_yen/flask-website-tutorial-part-1-overview-introduction-to-flask-6009decd5818)
+- [Flask Website Tutorial series](https://medium.com/@zackary_yen)
 
-The article covers everything from setting up the project to creating a secure login system, deploying services, and managing permissions.
+The series of articles covers everything from setting up the project to creating a secure login system, deploying services, and managing permissions.
