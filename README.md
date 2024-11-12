@@ -16,3 +16,12 @@ This repository includes two options for setting up your database:
 1. Step-by-Step Setup: Each part of the tutorial includes SQL snippets for creating only the necessary tables and records for that section (check the db folder -> part2.sql ~ part5.sql). This option is ideal if you are following along with the tutorial series and using the UI on the deployed website to create records.
 
 2. Full Database Setup with all_db.sql: If you'd like to set up the entire database with all tables and records at once, or if you've missed any steps in the tutorial, you can use the (check the db folder -> all_db.sql) file. This script includes all SQL commands needed to create databases, tables, and insert data, ensuring your database is complete without following every step in the tutorial.
+
+## 🖥️ Flask Code
+You can check the folder "flask," where all our three necessary folders and related code in this tutorial are located. Follow the tutorial series and implement these codes to learn and practice Flask development. Have fun exploring and building your Flask web application!
+
+### Three Folders
+- **website**: part 2
+- **service**: part 3
+- **admin_management**: part 5  
+(Permission in part 4 is directly added to the file)
