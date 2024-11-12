@@ -11,6 +11,13 @@ CREATE TABLE dbo.Users_Data (
     PRIMARY KEY (user_id)
 );
 
+INSERT INTO dbo.Users_Data (username, password, role_id, activate) VALUES
+('user1', '123', 2, 1),
+('user2', '123', 2, 0),
+('user3', '123', 1, 0),
+('user4', '123', 1, 1),
+('user5', '123', 2, 1);
+
 CREATE TABLE dbo.Login_Status (
     id          INT IDENTITY NOT NULL,
     user_id     INT NOT NULL,
@@ -19,9 +26,6 @@ CREATE TABLE dbo.Login_Status (
     access_time DATETIME NOT NULL,
     PRIMARY KEY (id)
 );
-
-INSERT INTO dbo.Users_Data (username, password, role_id, activate) 
-VALUES ('user1', '123', 2, '1');
 
 -- Part 3: Setup service_info database and tables for name input and services
 CREATE DATABASE service_info;
@@ -45,8 +49,12 @@ CREATE TABLE dbo.Services (
 
 INSERT INTO dbo.Services (service_name, IP, category) 
 VALUES 
-    ('hello', 'http://192.168.8.12:5001/hello', 'QC'),
-    ('review', 'http://192.168.8.12:5001/review', 'HM');
+('hello', 'http://192.168.8.12:5001/hello', 'QC'),
+('review', 'http://192.168.8.12:5001/review', 'HM'),
+('Service_management', 'http://192.168.8.12:5002/service_management/service_overview', 'Admin'),
+('User_management', 'http://192.168.8.12:5002/user_management/user_overview', 'Admin'),
+('Permission_management', 'http://192.168.8.12:5002/permission_management/permission_overview', 'Admin'),
+('Daily_monitor', 'http://192.168.8.12:5002/monitor', 'Admin');
 
 -- Part 4: Permissions table
 USE demo;
@@ -60,8 +68,22 @@ CREATE TABLE dbo.Permissions (
 
 INSERT INTO dbo.Permissions (user_id, service_id, role_id) 
 VALUES 
-    (1, 2, 2),
-    (4, 2, 2);
+(1, 1, 2),
+(1, 2, 2),
+(1, 3, 2),
+(1, 4, 2),
+(1, 5, 2),
+(1, 6, 2),
+(2, 2, 2),
+(2, 3, 2),
+(2, 4, 2),
+(2, 6, 2),
+(3, 4, 1),
+(3, 5, 1),
+(4, 2, 2),
+(5, 1, 2),
+(5, 2, 2);
+
 
 -- Part 5: Service Access Log table
 USE demo;
