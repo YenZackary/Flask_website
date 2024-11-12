@@ -10,7 +10,7 @@ For a detailed step-by-step guide on setting up and extending this project, plea
 
 The series of articles covers everything from setting up the project to creating a secure login system, deploying services, and managing permissions.
 
-🗄️ Database Setup Options
+## 🗄️ Database Setup Options
 This repository includes two options for setting up your database:
 
 1. Step-by-Step Setup: Each part of the tutorial includes SQL snippets for creating only the necessary tables and records for that section (check the db folder -> part2.sql ~ part5.sql). This option is ideal if you are following along with the tutorial series and using the UI on the deployed website to create records.
